@@ -1,0 +1,45 @@
+<div class="row margin-0">
+  <div class="col s6  hide-on-md-and-down">
+    <div class="vh-100 valign-wrapper">
+    <div class="card-panel blue z-depth-0 rounded-3 h-95 w-100 margin-0 center-wrapper">
+      <h4 class="white-text medium margin-0">Get started!</h4>
+    </div>
+  </div>
+  </div>
+  <div class="col s12 m12 l6 center-wrapper vh-100">
+    <section class="form-section padding-x-2">
+      <h5 class="bold margin-0">Registration</h5>
+      <div class="alert transparent-4 border-left-0 rounded-1 medium" *ngIf="alert_state !='none'" [ngClass]="{'red red-text':alert_state == 'error','green green-text':alert_state == 'success'}"><span class="msg">{{alert_msg}}</span></div>
+      <form [formGroup]="registrationForm" (submit)="postForm()">
+        <div class="input-field-outline blue-theme">
+          <div class="medium margin-bottom-2">First Name</div>
+          <input type="text" class="material-outline" placeholder="Please enter your first name" formControlName="first_name" required>
+        </div>
+        <div class="input-field-outline blue-theme">
+          <div class="medium margin-bottom-2">Last Name</div>
+          <input type="text" class="material-outline" placeholder="Please enter your last name" formControlName="last_name" required>
+        </div>
+        <div class="input-field-outline blue-theme">
+          <div class="medium margin-bottom-2">Email</div>
+          <input type="email" class="material-outline" placeholder="Please enter your email" formControlName="email" required>
+        </div>
+        <div class="input-field-outline blue-theme">
+          <div class="medium margin-bottom-2">Phone Number</div>
+          <input type="email" class="material-outline" placeholder="Please enter your phone number" formControlName="phone_number" required>
+        </div>
+        <div class="input-field-outline blue-theme">
+          <div class="medium margin-bottom-2">Password</div>
+          <div class="d-flex">
+            <input type="password" class="material-outline rounded-left border-right-0" placeholder="Please enter your password" #password formControlName="password" required>
+            <button class="btn blue z-depth-0 padding-x-2 rounded-right" type="button" (click)="toggle_visibility()"><i class="material-icons smallest">{{visibility_icon}}</i></button>
+        </div>
+        </div>
+        <div class="input-field-outline">
+          <button class="btn blue z-depth-0 w-100 medium">Register</button>
+        </div>
+      </form>
+      <div class="grey-text medium">Already have an account? <a class="blue-text bold" routerLink="/signin">Sign in</a></div>
+    </section>
+  </div>
+</div>
+

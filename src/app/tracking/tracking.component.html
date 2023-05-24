@@ -1,0 +1,350 @@
+<div class="row margin-0">
+  <div class="col s12 m12 l8 push-l4" >
+    <div *ngIf="show_details">
+    <div class="margin-y-4 valign-wrapper space-between flex-wrap">
+      <h5 class="medium margin-0">Summary Analytics</h5>
+      <h5 class="margin-0"><span class="medium">Today,</span> 09 April 2021</h5>
+      </div>
+      <div class="row margin-0">
+        <div class="col s12 m6">
+          <div class="card rounded-2 padding-y-2 border z-depth-0">
+            <div class="card-content valign-wrapper space-between">
+              <div class="valign-wrapper">
+              <div class="icon-box blue transparent-4 circle center-wrapper margin-right-2 blue-text text-darken-3"><i class="material-icons">person</i></div>
+              <h6 class="medium margin-0">Sender ID</h6>
+              </div>
+              <button class="btn-floating z-depth-0 transparent grey-text"><i class="material-icons">more_vert</i></button>
+            </div>
+            <div class="card-content padding-y-2">
+              <h5 class="medium margin-0">299399393JDK</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card rounded-2 padding-y-2 border z-depth-0">
+            <div class="card-content valign-wrapper space-between">
+              <div class="valign-wrapper">
+              <div class="icon-box green transparent-4 circle center-wrapper margin-right-2 green-text text-darken-3"><i class="material-icons">people</i></div>
+              <h6 class="medium margin-0">Recipient ID</h6>
+              </div>
+              <button class="btn-floating z-depth-0 transparent grey-text"><i class="material-icons">more_vert</i></button>
+            </div>
+            <div class="card-content padding-y-2">
+              <h5 class="medium margin-0">299399393JDK</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 class="medium margin-0">BA91223</h5>
+        <div class="card-panel z-depth-0 border rounded-2 padding-x-4">
+          <div class="padding-y-4 d-flex space-between">
+            <div>
+            <div class="medium blue-text">Shipment Code</div>
+            <h5 class="bold margin-0">BA91223</h5>
+          </div>
+          <div class="icon-box-bg grey lighten-2 circle margin-right-2 grey-text text-darken-2 center-wrapper"> <i class="material-icons-outline smaller">local_shipping</i></div>
+          </div>
+          <div class="padding-y-4">
+            <div class="medium blue-text">Package</div>
+            <h5 class="bold margin-0">Transformers Action Figure</h5>
+          </div>
+          <div class="divider"></div>
+          <div class="padding-y-4 d-flex space-between">
+          <div class="margin-right-3">
+            <div class="medium blue-text">Shipping</div>
+            <h5 class="bold margin-0">Sukabumi</h5>
+          </div>
+          <div class="valign-wrapper w-100">
+            <div class="divider w-100 b-2px"></div>
+          </div>
+          <div class="margin-left-3">
+            <div class="medium blue-text">Recipient</div>
+            <h5 class="bold margin-0">YogyaKarta</h5>
+          </div>
+          </div>
+          <div class="divider"></div>
+          <div class="padding-y-4 d-flex space-between">
+          <div>
+            <div class="medium blue-text">Customer</div>
+            <h5 class="bold margin-0">Sukabumi</h5>
+          </div>
+          <div>
+            <div class="medium blue-text">Weight</div>
+            <h5 class="bold margin-0">YogyaKarta</h5>
+          </div>
+          <div>
+            <div class="medium blue-text">Price</div>
+            <h5 class="bold margin-0">$250</h5>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m12 l4  pull-l8">
+    <div>
+      <section class="padding-top-4 padding-bottom-2 padding-x-1">
+    <div class="margin-top-0 margin-bottom-2 valign-wrapper">
+    <h5 class="bold margin-0">Tracking List</h5>
+  </div>
+  <div class="grey-text medium">Track your shipment</div>
+  <div class="card-panel valign-wrapper padding-y-0 rounded-1 padding-x-2 z-depth-0 border">
+    <i class="material-icons prefix">search</i>
+  <input type="text" class="material-outline z-depth-0 border-0" placeholder="Search">
+</div>
+</section>
+<section class="track-list overflow-auto padding-x-1">
+<ul class="collapsible rounded-1 overflow-0 z-depth-0 margin-0">
+  <li>
+    <div class="collapsible-header d-flex space-between" (click)="show_more()">
+      <div>
+      <div class="grey-text medium">Tracking Number</div>
+      <h6 class="margin-0 medium">BG57575</h6>
+    </div>
+      <div class="green-text medium">Delivered</div>
+    </div>
+    <div class="collapsible-body padding-y-0">
+      <div class="padding-y-3">
+      <div class="padding-bottom-2 valign-wrapper">
+      <div class="icon-box grey lighten-2 circle margin-right-2 grey-text text-darken-2 center-wrapper"> <i class="material-icons-outline">local_shipping</i></div>
+      <div>
+      <div class="grey-text medium">From</div>
+      <h6 class="margin-0 medium">Dr J.K. Adams</h6>
+    </div>
+      </div>
+      <div class="padding-top-2 margin-bottom-3  valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">location_on</i></div>
+        <div>
+        <div class="grey-text medium">To</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+      <div class="divider"></div>
+      <div class="padding-y-2 valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">person</i></div>
+        <div>
+        <div class="grey-text medium">Customer</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+     </div>
+    </div>
+  </li>
+  <li>
+    <div class="collapsible-header d-flex space-between" (click)="show_more()">
+      <div>
+      <div class="grey-text medium">Tracking Number</div>
+      <h6 class="margin-0 medium">BG57575</h6>
+    </div>
+      <div class="blue-text medium">On Delivery</div>
+    </div>
+    <div class="collapsible-body padding-y-0">
+      <div class="padding-y-3">
+      <div class="padding-bottom-2 valign-wrapper">
+      <div class="icon-box grey lighten-2 circle margin-right-2 grey-text text-darken-2 center-wrapper"> <i class="material-icons-outline">local_shipping</i></div>
+      <div>
+      <div class="grey-text medium">From</div>
+      <h6 class="margin-0 medium">Dr J.K. Adams</h6>
+    </div>
+      </div>
+      <div class="padding-top-2 margin-bottom-3  valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">location_on</i></div>
+        <div>
+        <div class="grey-text medium">To</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+      <div class="divider"></div>
+      <div class="padding-y-2 valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">person</i></div>
+        <div>
+        <div class="grey-text medium">Customer</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+     </div>
+    </div>
+  </li>
+  <li>
+    <div class="collapsible-header d-flex space-between" (click)="show_more()">
+      <div>
+      <div class="grey-text medium">Tracking Number</div>
+      <h6 class="margin-0 medium">BG57575</h6>
+    </div>
+      <div class="blue-text medium">On Delivery</div>
+    </div>
+    <div class="collapsible-body padding-y-0">
+      <div class="padding-y-3">
+      <div class="padding-bottom-2 valign-wrapper">
+      <div class="icon-box grey lighten-2 circle margin-right-2 grey-text text-darken-2 center-wrapper"> <i class="material-icons-outline">local_shipping</i></div>
+      <div>
+      <div class="grey-text medium">From</div>
+      <h6 class="margin-0 medium">Dr J.K. Adams</h6>
+    </div>
+      </div>
+      <div class="padding-top-2 margin-bottom-3  valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">location_on</i></div>
+        <div>
+        <div class="grey-text medium">To</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+      <div class="divider"></div>
+      <div class="padding-y-2 valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">person</i></div>
+        <div>
+        <div class="grey-text medium">Customer</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+     </div>
+    </div>
+  </li>
+  <li>
+    <div class="collapsible-header d-flex space-between" (click)="show_more()">
+      <div>
+      <div class="grey-text medium">Tracking Number</div>
+      <h6 class="margin-0 medium">BG57575</h6>
+    </div>
+      <div class="blue-text medium">On Delivery</div>
+    </div>
+    <div class="collapsible-body padding-y-0">
+      <div class="padding-y-3">
+      <div class="padding-bottom-2 valign-wrapper">
+      <div class="icon-box grey lighten-2 circle margin-right-2 grey-text text-darken-2 center-wrapper"> <i class="material-icons-outline">local_shipping</i></div>
+      <div>
+      <div class="grey-text medium">From</div>
+      <h6 class="margin-0 medium">Dr J.K. Adams</h6>
+    </div>
+      </div>
+      <div class="padding-top-2 margin-bottom-3  valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">location_on</i></div>
+        <div>
+        <div class="grey-text medium">To</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+      <div class="divider"></div>
+      <div class="padding-y-2 valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">person</i></div>
+        <div>
+        <div class="grey-text medium">Customer</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+     </div>
+    </div>
+  </li>
+  <li>
+    <div class="collapsible-header d-flex space-between" (click)="show_more()">
+      <div>
+      <div class="grey-text medium">Tracking Number</div>
+      <h6 class="margin-0 medium">BG57575</h6>
+    </div>
+      <div class="blue-text medium">On Delivery</div>
+    </div>
+    <div class="collapsible-body padding-y-0">
+      <div class="padding-y-3">
+      <div class="padding-bottom-2 valign-wrapper">
+      <div class="icon-box grey lighten-2 circle margin-right-2 grey-text text-darken-2 center-wrapper"> <i class="material-icons-outline">local_shipping</i></div>
+      <div>
+      <div class="grey-text medium">From</div>
+      <h6 class="margin-0 medium">Dr J.K. Adams</h6>
+    </div>
+      </div>
+      <div class="padding-top-2 margin-bottom-3  valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">location_on</i></div>
+        <div>
+        <div class="grey-text medium">To</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+      <div class="divider"></div>
+      <div class="padding-y-2 valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">person</i></div>
+        <div>
+        <div class="grey-text medium">Customer</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+     </div>
+    </div>
+  </li>
+  <li>
+    <div class="collapsible-header d-flex space-between" (click)="show_more()">
+      <div>
+      <div class="grey-text medium">Tracking Number</div>
+      <h6 class="margin-0 medium">BG57575</h6>
+    </div>
+      <div class="blue-text medium">On Delivery</div>
+    </div>
+    <div class="collapsible-body padding-y-0">
+      <div class="padding-y-3">
+      <div class="padding-bottom-2 valign-wrapper">
+      <div class="icon-box grey lighten-2 circle margin-right-2 grey-text text-darken-2 center-wrapper"> <i class="material-icons-outline">local_shipping</i></div>
+      <div>
+      <div class="grey-text medium">From</div>
+      <h6 class="margin-0 medium">Dr J.K. Adams</h6>
+    </div>
+      </div>
+      <div class="padding-top-2 margin-bottom-3  valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">location_on</i></div>
+        <div>
+        <div class="grey-text medium">To</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+      <div class="divider"></div>
+      <div class="padding-y-2 valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">person</i></div>
+        <div>
+        <div class="grey-text medium">Customer</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+     </div>
+    </div>
+  </li>
+  <li>
+    <div class="collapsible-header d-flex space-between" (click)="show_more()">
+      <div>
+      <div class="grey-text medium">Tracking Number</div>
+      <h6 class="margin-0 medium">BG57575</h6>
+    </div>
+      <div class="blue-text medium">On Delivery</div>
+    </div>
+    <div class="collapsible-body padding-y-0">
+      <div class="padding-y-3">
+      <div class="padding-bottom-2 valign-wrapper">
+      <div class="icon-box grey lighten-2 circle margin-right-2 grey-text text-darken-2 center-wrapper"> <i class="material-icons-outline">local_shipping</i></div>
+      <div>
+      <div class="grey-text medium">From</div>
+      <h6 class="margin-0 medium">Dr J.K. Adams</h6>
+    </div>
+      </div>
+      <div class="padding-top-2 margin-bottom-3  valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">location_on</i></div>
+        <div>
+        <div class="grey-text medium">To</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+      <div class="divider"></div>
+      <div class="padding-y-2 valign-wrapper">
+        <div class="icon-box blue transparent-4 circle margin-right-2 blue-text text-darken-2 center-wrapper"> <i class="material-icons">person</i></div>
+        <div>
+        <div class="grey-text medium">Customer</div>
+        <h6 class="margin-0 medium">Mrs Bandana</h6>
+      </div>
+        </div>
+     </div>
+    </div>
+  </li>
+</ul>
+</section>
+</div>
+  </div>
+
+</div>
+

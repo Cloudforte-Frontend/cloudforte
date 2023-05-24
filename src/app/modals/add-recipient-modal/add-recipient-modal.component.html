@@ -1,0 +1,44 @@
+<div class="modal rounded-2" id="add-recipient-modal">
+  <div>
+  <div class="modal-content">
+    <div class="d-flex space-between">
+      <h5 class="bold margin-top-0">Add Recipient</h5>
+      <button class="btn-floating modal-close grey lighten-3 black-text z-depth-0"><i class="material-icons">close</i></button>
+    </div>
+   <form [formGroup]="rpForm" (submit)="post()">
+       <div class="input-field-outline blue-theme">
+        <div class="medium margin-bottom-2">First Name</div>
+        <input type="text" class="material-outline" formArrayName="first_name">
+      </div>
+      <div class="input-field-outline blue-theme">
+        <div class="medium margin-bottom-2">Last Name</div>
+        <input type="text" class="material-outline"  formControlName="last_name">
+      </div>
+      <div class="input-field-outline blue-theme">
+        <div class="medium margin-bottom-2" >Email</div>
+        <input type="email" class="material-outline" formControlName="email">
+      </div>
+      <div class="input-field-outline blue-theme">
+        <div class="medium margin-bottom-2">Phone Number</div>
+        <input type="text" class="material-outline" formControlName="phone_number">
+      </div>
+      <div class="input-field-outline blue-theme">
+        <div class="medium margin-bottom-2">Address</div>
+        <input type="text" class="material-outline" formControlName="address">
+      </div>
+      <div class="input-field-outline blue-theme">
+        <div class="medium margin-bottom-2">City</div>
+        <input type="text" class="material-outline" formControlName="city">
+      </div>
+      <div class="input-field-outline blue-theme">
+        <div class="medium margin-bottom-2" >State</div>
+        <input type="text" class="material-outline" formControlName="state">
+      </div>
+      <div class="input-field-outline blue-theme">
+        <div class="medium margin-bottom-2">Zip Code</div>
+        <input type="text" class="material-outline"  formControlName="zip_code">
+      </div>
+      <button class="btn blue z-depth-0 w-100 medium modal-close" type="submit">Save</button>
+    </form>
+  </div>
+</div>

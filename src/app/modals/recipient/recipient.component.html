@@ -1,0 +1,15 @@
+<div class="dropdown-content padding-2 rounded-2 w-100" id="rp_dropdown">
+<div class="content">
+ <ul class="dropdown-menu margin-top-0 padding-bottom-2">
+  <li *ngFor="let rep of recipients" class="rounded-1" (click)="setID(rep.id)">
+    <span class="d-flex valign-wrapper">
+      <i class="material-icons smaller margin-right-2 ">person</i>
+      <div>
+      <div>{{rep.first_name}} {{rep.last_name}}</div>
+      <div>{{rep.address}} {{rep.city}} {{rep.state}}</div>
+    </div>
+    </span>
+  </li>
+ </ul>
+</div>
+</div>

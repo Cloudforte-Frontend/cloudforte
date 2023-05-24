@@ -1,0 +1,18 @@
+
+<div class="row margin-0">
+  <div class="col s2 hide-on-md-and-down">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="col s12 m12 l10 vh-100 overflow-auto">
+    <nav class="white z-depth-0 margin-0 hide-on-lg-and-up">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo black-text bold">Cloudforte</a>
+        <a class="sidenav-trigger margin-left-auto" data-target="mobile-nav"><button class="btn-floating z-depth-0 white black-text" ><i class="material-icons">menu</i></button></a>
+      </div>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div class="sidenav padding-x-3" id="mobile-nav">
+  <app-navbar></app-navbar>
+</div>

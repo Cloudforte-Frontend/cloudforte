@@ -1,0 +1,33 @@
+<div class="modal rounded-2" id="new-package">
+  <div class="modal-content padding-top-3">
+    <div class="d-flex space-between">
+      <h5 class="bold margin-top-0">New Package</h5>
+      <button class="btn-floating modal-close grey lighten-3 black-text z-depth-0"><i class="material-icons">close</i></button>
+    </div>
+
+   <form [formGroup]="newPackageForm" (submit)="post()">
+    <div class="input-field-outline blue-theme">
+      <div class="medium margin-bottom-2">Name</div>
+      <input type="text" class="material-outline" placeholder="Please enter the package name" formControlName="name">
+    </div>
+    <div class="input-field-outline blue-theme">
+      <div class="medium margin-bottom-2">Description</div>
+      <textarea type="text" class="material-textarea material-outline" placeholder="Please enter the package description" formControlName="description"></textarea>
+    </div>
+    <div class="input-field-outline blue-theme">
+      <div class="medium margin-bottom-2">Weight</div>
+      <input type="number" class="material-outline" placeholder="Please enter the weight in grams" formControlName="weight">
+    </div>
+    <div class="input-field-outline blue-theme">
+      <div class="medium margin-bottom-2">Recipient ID</div>
+      <div class="d-flex">
+      <input type="number" class="material-outline dropdown-trigger rounded-left border-right-0" id="rp-trigger" data-target="rp_dropdown" formControlName="recipient_id" [(ngModel)]="newPackageForm.value.recipient_id" #recipient_id>
+      <button class="btn blue z-depth-0 medium modal-trigger rounded-right" type="button" data-target="add-recipient-modal"><i class="material-icons margin-right-2">add</i>Add</button>
+      <app-recipient (getIDEvent)="setRecipientID($event)"></app-recipient>
+    </div>
+    </div>
+    <button class="btn blue z-depth-0 w-100 medium">Create</button>
+  </form>
+  </div>
+</div>
+<app-add-recipient-modal></app-add-recipient-modal>

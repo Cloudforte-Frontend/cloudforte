@@ -1,0 +1,22 @@
+.icon-box{
+  height:50px;
+  width:50px;
+}
+.icon-box-bg{
+  height:80px;
+  width:80px;
+}
+
+.border{
+  border: 1px solid #e0e0e0;
+  }
+.customer-list{
+  height: calc(100vh - 160px);
+}
+.customer-card{
+  cursor:pointer;
+}
+
+.white-border{
+  border: 2px solid white;
+}

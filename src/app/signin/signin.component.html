@@ -23,7 +23,22 @@
     </div>
     </div>
     <div class="input-field-outline">
-      <button class="btn blue z-depth-0 w-100 medium">Sign in</button>
+      <button class="btn blue z-depth-0 w-100 medium">
+        <span *ngIf="!btn_pending else pending">Sign in</span>
+        <ng-template #pending>
+        <div class="preloader-wrapper tiny active">
+          <div class="spinner-layer spinner-white-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      </button>
     </div>
   </form>
   <div class="grey-text medium">Don't have an account? <a class="blue-text bold" routerLink="/register">Register</a></div>

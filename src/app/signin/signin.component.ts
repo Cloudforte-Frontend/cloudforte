@@ -9,6 +9,7 @@ import { AuthService } from '../services/auth.service';
   providers: [AuthService]
 })
 export class SigninComponent implements OnInit{
+  public btn_pending = false;
   public visibility_icon = "visibility";
   public alert_msg = '';
   public alert_state = 'none'
@@ -24,6 +25,7 @@ export class SigninComponent implements OnInit{
       (result:any) =>{
         this.alert_state = result.state;
         this.alert_msg = result.msg;
+        this.btn_pending = false;
     });
   }
   toggle_visibility(){
@@ -40,5 +42,6 @@ export class SigninComponent implements OnInit{
 
   postForm(){
     this.auth.signIn(this.signInForm.value);
+    this.btn_pending = true;
   }
 }

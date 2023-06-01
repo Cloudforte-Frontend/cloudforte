@@ -12,9 +12,10 @@ export class RegistrationComponent implements OnInit{
 constructor( private fb:UntypedFormBuilder, public auth:AuthService){}
 public visibility_icon = "visibility";
 public alert_msg = '';
-public alert_state = 'none'
+public alert_state = 'none';
 @ViewChild('password') passwordField:any;
 public registrationForm:any;
+public btn_pending = false;
 ngOnInit(): void {
   this.registrationForm = this.fb.group({
     first_name:"",
@@ -27,6 +28,7 @@ ngOnInit(): void {
   (result:any) =>{
     this.alert_state = result.state;
     this.alert_msg = result.msg;
+    this.btn_pending = false;
 });
 }
 toggle_visibility(){
@@ -41,7 +43,7 @@ toggle_visibility(){
 }
 
 postForm(){
-  // console.log();
   this.auth.regsister(this.registrationForm.value);
+  this.btn_pending = true;
 }
 }

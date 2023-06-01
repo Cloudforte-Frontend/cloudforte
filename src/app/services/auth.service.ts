@@ -1,6 +1,7 @@
 import {  EventEmitter,Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -30,9 +31,9 @@ export class AuthService {
       this.http.post(url,form)
       .subscribe(
         (result:any) =>{
-         console.log(result);
+         this.setUser(result.token)
          sessionStorage.setItem('cdf-token',result.token);
-         this.router.navigate(['/admin/dashboard'])
+
       },
       (error:any) =>{
         console.log(error);
@@ -40,9 +41,22 @@ export class AuthService {
       });
     }
 
-    getUser(){
+    setUser(token:any){
       const url = 'http://api.cloudforte.ng/v1/users/profile';
-      const myHeaders:any = {'Authorization': 'Bearer '+sessionStorage.getItem('cdf-token')};
-      return this.http.get(url,{headers:myHeaders});
+      const myHeaders:any = {'Authorization': 'Bearer '+token};
+      return this.http.get(url,{headers:myHeaders})
+      .subscribe(
+        (result:any) =>{
+         sessionStorage.setItem('cdf-user',JSON.stringify(result));
+         this.router.navigate(['/admin/dashboard']);
+      },
+      (error:any) =>{
+        console.log(error);
+      });
+    }
+
+    getUser(){
+      let user:any =  sessionStorage.getItem('cdf-user');
+      return  JSON.parse(user);
     }
 }

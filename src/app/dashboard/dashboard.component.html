@@ -1,18 +1,31 @@
-<section class="d-flex space-between padding-x-2 flex-wrap">
-  <div>
-  <div>
-  <h5 class="bold">The Overview Admin</h5>
-  <p><span class="bold">Monday</span> 21 April 2022</p>
-</div>
-</div>
-<div class="valign-wrapper">
-  <button class="btn-floating blue-outline btn-outline z-depth-0 flex-shrink-0">
-    <i class="material-icons smallest">add_link</i>
-  </button>
-  <button class="btn-outline blue-outline rounded-pill z-depth-0 margin-left-4">Long Shipping</button>
-  <div class="vr margin-x-4"></div>
-  <button class="btn rounded-pill z-depth-0 blue"><i class="material-icons padding-right-1">add</i>New Shipping</button>
-</div>
+<section>
+  <div class="row">
+    <div class="col s12 m6">
+      <h5 class="bold">The Overview Admin</h5>
+  <p><span class="bold">Monday</span> {{today | date:'medium'}}</p>
+    </div>
+    <div class="col s12 m6 valign-wrapper flex-end padding-y-2">
+        <button class="btn-floating btn-outline blue-outline z-depth-0 flex-shrink-0">
+          <i class="material-icons smallest">add_link</i>
+        </button>
+        <button class="btn-outline blue-outline rounded-pill z-depth-0 margin-left-4">Long Shipping</button>
+        <div class="vr margin-x-4"></div>
+        <button class="btn rounded-pill z-depth-0 blue"><i class="material-icons padding-right-1">add</i>New Shipping</button>
+        <button class="btn-floating black z-depth-0 flex-shrink-0 margin-left-4 dropdown-trigger" data-target="profile-options" id="profile-trigger">
+          <h5 class="margin-0 uppercase bold">{{user.first_name[0]}}</h5>
+        </button>
+          <ul id="profile-options" class=" dropdown-content rounded-1 dropdown-menu profile-content">
+            <li>
+              <a class="black-text">Manage Account</a>
+            </li>
+            <li>
+              <a class="black-text">Logout</a>
+            </li>
+          </ul>
+    </div>
+  </div>
+
+
 </section>
 <section>
   <div class="row margin-0">
